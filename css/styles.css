@@ -3,12 +3,12 @@
       --bg: 
       #dfe8f9;
       --card: rgba(255, 255, 255, 0.06);
-      --card2: rgba(255,255,255,.10);
+      --card2: rgba(246, 242, 242, 0.1);
       --text: rgba(27, 25, 25, 0.92);
       --muted: rgba(30, 28, 28, 0.7);
-      --brand: #2b0967; /* morado */
+      --brand: #ebe8f0; /* morado */
       --brand2:#22c55e; /* verde */
-      --line: rgba(255,255,255,.12);
+      --line: rgba(62, 9, 9, 0.12);
       --shadow: 0 14px 40px rgba(0,0,0,.35);
       --radius: 18px;
     }
@@ -328,7 +328,7 @@
       border-radius: 999px;
       font-weight: 900;
       font-size: .82rem;
-      border: 1px solid rgba(255,255,255,.18);
+      border: 1px solid rgba(17, 17, 17, 0.863);
       background: rgba(11,18,32,.45);
       color: rgba(255,255,255,.92);
       backdrop-filter: blur(8px);
@@ -357,8 +357,8 @@
     }
 
     .chip{
-      border: 1px solid rgba(255,255,255,.12);
-      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255, 255, 255, 0.938);
+      background: rgba(235, 231, 231, 0.844);
       padding: 6px 10px;
       border-radius: 999px;
     }
@@ -531,7 +531,7 @@
     .modal-backdrop{
       position: fixed;
       inset: 0;
-      background: rgba(0,0,0,.55);
+      background: rgba(253, 249, 249, 0.55);
       display:none;
       align-items: center;
       justify-content: center;
@@ -542,10 +542,10 @@
     .modal{
       width: min(720px, 92vw);
       border-radius: 20px;
-      border: 1px solid rgba(255,255,255,.16);
-      background: rgba(11,18,32,.85);
+      border: 1px solid rgba(0, 0, 0, 0.907);
+      background: rgba(205, 211, 219, 0.933);
       backdrop-filter: blur(12px);
-      box-shadow: 0 30px 80px rgba(0,0,0,.55);
+      box-shadow: 0 30px 80px rgba(15, 14, 14, 0.55);
       overflow:hidden;
     }
 
