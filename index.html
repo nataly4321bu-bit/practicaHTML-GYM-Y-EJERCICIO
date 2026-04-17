@@ -1,0 +1,415 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+   <link rel="stylesheet" href="css/styles.css">
+  <title>GymFit - Rutinas y Ejercicios</title>
+</head>
+
+<body>
+  <header>
+    <div class="container">
+      <div class="nav">
+        <div class="brand">
+          <div class="logo" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none">
+              <path d="M6 14c2-1 3-3 3-5V5h6v4c0 2 1 4 3 5" stroke="white" stroke-width="2" stroke-linecap="round"/>
+              <path d="M4 20h16" stroke="white" stroke-width="2" stroke-linecap="round"/>
+            </svg>
+          </div>
+          <span>GymFit</span>
+        </div>
+
+        <button class="menu-btn" id="menuBtn" type="button">
+          ☰ Menú
+        </button>
+
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#rutinas">Rutinas</a></li>
+            <li><a href="#horarios">Horarios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+
+      <div class="nav-mobile" id="navMobile" aria-hidden="true">
+        <a href="#inicio">Inicio</a>
+        <a href="#rutinas">Rutinas</a>
+        <a href="#horarios">Horarios</a>
+        <a href="#contacto">Contacto</a>
+      </div>
+    </div>
+  </header>
+
+  <main class="container">
+    <!-- HERO -->
+    <section class="hero" id="inicio">
+      <div class="hero-grid">
+        <div class="hero-card">
+          <div class="hero-main">
+            <div class="pill">💪 Entrena bonito. Sin complicarte.</div>
+            <h1>Un gimnasio moderno con rutinas sencillas para empezar hoy.</h1>
+            <p>
+              Elige una rutina, mira los ejercicios y arma tu sesión. Ideal si estás retomando o quieres
+              algo simple pero efectivo.
+            </p>
+            <div class="cta-row">
+              <button class="btn btn-primary" type="button" id="btnVerRutinas">
+                ▶ Ver rutinas
+              </button>
+              <button class="btn" type="button" id="btnSugerencia">
+                ✨ Sugerencia rápida
+              </button>
+            </div>
+          </div>
+
+          <div class="hero-stats" aria-label="Estadísticas del gimnasio">
+            <div class="stat">
+              <b>20–40 min</b>
+              <span>Sesiones</span>
+            </div>
+            <div class="stat">
+              <b>4 niveles</b>
+              <span>Fácil a medio</span>
+            </div>
+            <div class="stat">
+              <b>Plan diario</b>
+              <span>Rutina guiada</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-card hero-img" aria-label="Imagen del gimnasio">
+          <img
+            alt="Gente entrenando en un gimnasio moderno"
+            src="img/gym.png"
+            loading="lazy"
+          />
+          <div class="overlay"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RUTINAS -->
+    <section id="rutinas">
+      <div class="section-title">
+        <div>
+          <h2>Rutinas</h2>
+          <p>Filtra por objetivo y haz clic para ver los ejercicios.</p>
+        </div>
+
+        <div class="filters" role="tablist" aria-label="Filtros de rutinas">
+          <button class="filter-btn active" type="button" data-filter="todos">Todos</button>
+          <button class="filter-btn" type="button" data-filter="fuerza">Fuerza</button>
+          <button class="filter-btn" type="button" data-filter="cardio">Cardio</button>
+          <button class="filter-btn" type="button" data-filter="movilidad">Movilidad</button>
+        </div>
+      </div>
+
+      <div class="grid" id="rutinasGrid">
+        <!-- Cards (JS también puede usarlas) -->
+        <article class="card" data-categoria="fuerza">
+          <div class="thumb">
+            <span class="badge">Fuerza • Nivel fácil</span>
+            <img
+              alt="Hombre haciendo sentadillas"
+              src="img/sentadillas.jpg"
+              loading="lazy"
+            />
+          </div>
+          <div class="body">
+            <h3>Full Body Base</h3>
+            <div class="meta">
+              <span class="chip">3 ejercicios</span>
+              <span class="chip">20–30 min</span>
+            </div>
+            <div class="actions">
+              <button class="small-btn rutina-btn"
+                type="button"
+                data-title="Full Body Base"
+                data-desc="Rutina sencilla para activar el cuerpo: movimientos base, buena postura y progresión gradual."
+                data-img="https://images.unsplash.com/photo-1517964607111-5d7a1f5a62d0?auto=format&fit=crop&w=1200&q=80"
+                data-bullets='["Sentadilla al aire o con peso ligero","Flexiones (rodillas si hace falta)","Remo con banda o mancuernas"]'>
+                Ver ejercicios
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="cardio">
+          <div class="thumb">
+            <span class="badge">Cardio • Nivel fácil</span>
+            <img
+              alt="Corriendo en cinta"
+              src="img/cinta.jpg"
+              loading="lazy"
+            />
+          </div>
+          <div class="body">
+            <h3>Intervalos Suaves</h3>
+            <div class="meta">
+              <span class="chip">10 rondas</span>
+              <span class="chip">25–35 min</span>
+            </div>
+            <div class="actions">
+              <button class="small-btn rutina-btn"
+                type="button"
+                data-title="Intervalos Suaves"
+                data-desc="Cardio con pausas para que sea llevadero. Mantén el ritmo y respira con control."
+                data-img="https://images.unsplash.com/photo-1599058917212-d78f9e5ad0a4?auto=format&fit=crop&w=1200&q=80"
+                data-bullets='["Calentamiento 5 min","40s rápido / 20s caminando","Enfriar 3–5 min"]'
+              >
+                Ver ejercicios
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="movilidad">
+          <div class="thumb">
+            <span class="badge">Movilidad • Nivel fácil</span>
+            <img
+              alt="Estiramientos antes del entrenamiento"
+              src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80"
+              loading="lazy"
+            />
+          </div>
+          <div class="body">
+            <h3>Movilidad de 15</h3>
+            <div class="meta">
+              <span class="chip">15 min</span>
+              <span class="chip">Espalda + cadera</span>
+            </div>
+            <div class="actions">
+              <button class="small-btn rutina-btn"
+                type="button"
+                data-title="Movilidad de 15"
+                data-desc="Una rutina corta para soltar cadera, mejorar postura y prepararte para entrenar mejor."
+                data-img="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1200&q=80"
+                data-bullets='["Gato-vaca (1 min)","Estiramiento de cadera (1 min por lado)","Rotaciones de hombro (1 min)"]'
+              >
+                Ver ejercicios
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="fuerza">
+          <div class="thumb">
+            <span class="badge">Fuerza • Nivel medio</span>
+            <img
+              alt="Persona entrenando con mancuernas"
+              src="img/mancuerna.jpg"
+              loading="lazy"
+            />
+          </div>
+          <div class="body">
+            <h3>Empuje & Tirón</h3>
+            <div class="meta">
+              <span class="chip">4 ejercicios</span>
+              <span class="chip">30–40 min</span>
+            </div>
+            <div class="actions">
+              <button class="small-btn rutina-btn"
+                type="button"
+                data-title="Empuje & Tirón"
+                data-desc="Rutina equilibrada para tren superior. Ideal si quieres progresar y mantener buena técnica."
+                data-img="https://images.unsplash.com/photo-1517964713776-8c9d3f2f2e11?auto=format&fit=crop&w=1200&q=80"
+                data-bullets='["Press (mancuernas o flexiones)","Pase de hombros / movilidad ligera","Remo con banda o mancuerna","Plancha 2×30–45s"]'
+              >
+                Ver ejercicios
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="cardio">
+          <div class="thumb">
+            <span class="badge">Cardio • Nivel medio</span>
+            <img
+              alt="Saltar cuerda"
+              src="img/cuerda.jpg"
+              loading="lazy"
+            />
+          </div>
+          <div class="body">
+            <h3>Saltar y Ajustar</h3>
+            <div class="meta">
+              <span class="chip">20–30 min</span>
+              <span class="chip">Impacto controlado</span>
+            </div>
+            <div class="actions">
+              <button class="small-btn rutina-btn"
+                type="button"
+                data-title="Saltar y Ajustar"
+                data-desc="Cardio con ajustes: si es mucho, baja el ritmo; si es poco, sube un poco."
+                data-img="https://images.unsplash.com/photo-1526401485004-2aa7b7b4d1ff?auto=format&fit=crop&w=1200&q=80"
+                data-bullets='["Calentamiento 4–5 min","Saltar 30s / descansar 20s","Alternar pies o descanso activo"]'
+              >
+                Ver ejercicios
+              </button>
+            </div>
+          </div>
+        </article>
+
+        <article class="card" data-categoria="movilidad">
+          <div class="thumb">
+            <span class="badge">Movilidad • Nivel medio</span>
+            <img
+              alt="Estiramiento de brazos"
+              src="img/estitamiento.png"
+              loading="lazy"
+            />
+          </div>
+          <div class="body">
+            <h3>Espalda Feliz</h3>
+            <div class="meta">
+              <span class="chip">12–18 min</span>
+              <span class="chip">Postura</span>
+            </div>
+            <div class="actions">
+              <button class="small-btn rutina-btn"
+                type="button"
+                data-title="Espalda Feliz"
+                data-desc="Rutina para liberar tensión: hombros, dorsales y columna torácica."
+                data-img="https://images.unsplash.com/photo-1540492291935-2a2f8d2cfb5c?auto=format&fit=crop&w=1200&q=80"
+                data-bullets='["Estiramiento dorsal (1 min)","Puente de glúteo (2×10 reps)","Torsión suave (1 min por lado)"]'
+              >
+                Ver ejercicios
+              </button>
+            </div>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- HORARIOS -->
+    <section id="horarios">
+      <div class="section-title">
+        <div>
+          <h2>Horarios</h2>
+          <p>Clases grupales y entreno libre. Ajusta según tu nivel.</p>
+        </div>
+      </div>
+
+      <div class="list">
+        <div class="card time-card">
+          <b>Clases (Lunes–Viernes)</b>
+          <div class="rows">
+            <div class="row"><span>Full Body</span><span>07:30</span></div>
+            <div class="row"><span>Cardio Suave</span><span>12:00</span></div>
+            <div class="row"><span>Movilidad</span><span>19:00</span></div>
+          </div>
+        </div>
+
+        <div class="card time-card">
+          <b>Entreno libre</b>
+          <div class="rows">
+            <div class="row"><span>Zona pesas</span><span>06:00–22:00</span></div>
+            <div class="row"><span>Cardio</span><span>06:00–22:00</span></div>
+            <div class="row"><span>Estiramientos</span><span>Todo el día</span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto">
+      <div class="section-title">
+        <div>
+          <h2>Contacto</h2>
+          <p>Escríbenos y te recomendamos una rutina según tu objetivo.</p>
+        </div>
+      </div>
+
+      <div class="contact-grid">
+        <div class="card">
+          <form id="contactForm">
+            <div>
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" placeholder="Tu nombre" required />
+            </div>
+
+            <div>
+              <label for="objetivo">Objetivo</label>
+              <input id="objetivo" name="objetivo" type="text" placeholder="Fuerza, cardio o movilidad" required />
+            </div>
+
+            <div>
+              <label for="mensaje">Mensaje</label>
+              <textarea id="mensaje" name="mensaje" placeholder="¿Cuántos días quieres entrenar? ¿Alguna lesión?" required></textarea>
+            </div>
+
+            <div class="form-actions">
+              <button class="btn btn-primary" type="submit">Enviar</button>
+              <div class="hint">Respuesta simulada (demo).</div>
+            </div>
+
+            <div class="toast" id="toast">
+              ✅ ¡Mensaje enviado! Te respondemos pronto con una rutina sugerida.
+            </div>
+          </form>
+        </div>
+
+        <div class="card" style="overflow:hidden;">
+          <div class="thumb" style="height: 220px;">
+            <span class="badge">Gimnasio acogedor</span>
+            <img
+              alt="Ambiente del gimnasio"
+              src="https://images.unsplash.com/photo-1517836357463-d25dfeac3438?auto=format&fit=crop&w=1400&q=80"
+              loading="lazy"
+            />
+          </div>
+          <div class="body">
+            <h3>¿Nuevo/a en el gym?</h3>
+            <p style="margin:0;color:var(--muted);font-weight:650;">
+              Empieza con lo básico y sube poco a poco. Si algo duele (no es “ardor”), para y ajusta.
+            </p>
+            <div class="meta">
+              <span class="chip">Soporte</span>
+              <span class="chip">Técnica</span>
+              <span class="chip">Progreso</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      <div>
+     <span style="color:rgba(255,255,255,.85)">GymFit</span>
+      </div>
+    </footer>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="modalBackdrop" role="dialog" aria-modal="true" aria-hidden="true">
+    <div class="modal">
+      <div class="modal-top">
+        <b id="modalTitle">Rutina</b>
+        <button class="close" type="button" id="modalClose">Cerrar ✕</button>
+      </div>
+
+      <div class="modal-body">
+        <div class="modal-img">
+          <img id="modalImg" alt="Imagen de rutina" src="" />
+        </div>
+
+        <div class="modal-content">
+          <p id="modalDesc"></p>
+          <ul class="bullets" id="modalBullets"></ul>
+          <div class="meta" style="margin-top:4px;">
+            <span class="chip">Tip: 2–3 series al inicio</span>
+            <span class="chip">Descanso: 60–90s</span>
+             <link rel="stylesheet" href="js/app.js">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="js/app.js"></script>
+</body>
+</html>
